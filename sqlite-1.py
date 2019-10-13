@@ -24,12 +24,18 @@ def dynamic_data_entry():
         (unix, date, keyword, value))
     conn.commit()
 
-create_table()
+def read_from_db():
+    c.execute("SELECT keyword, unix FROM stuffToPlot WHERE unix > 1570997925.156359")
+    for row in c.fetchall():
+        print(row)
+
+# create_table()
 # data_entry()
 
-for i in range(10):
-    dynamic_data_entry()
-    time.sleep(1)
+# for i in range(10):
+#     dynamic_data_entry()
+#     time.sleep(1)
 
+read_from_db()
 c.close()
 conn.close()
