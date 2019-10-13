@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "C:\\Users\\Vasko\\.conda\\envs\\sqliteEnv\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
