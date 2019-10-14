@@ -46,7 +46,33 @@ def graph_data():
     plt.show()
 
 
-graph_data()
+def del_and_update():
+    c.execute("SELECT * FROM stuffToPlot")
+    [print(row) for row in c.fetchall()]
+
+    # c.execute("UPDATE stuffToPlot SET value = 99 WHERE value = 8")
+    # conn.commit()
+
+    # c.execute("SELECT * FROM stuffToPlot")
+    # [print(row) for row in c.fetchall()]
+
+    # c.execute("DELETE FROM stuffToPlot WHERE value = 99")
+    # conn.commit()
+
+    # print(50 * "#")
+    
+    # check what we are going to delete prior to deleting it
+    c.execute("SELECT * FROM stuffToPlot WHERE value = 2")
+    [print(row) for row in c.fetchall()]
+
+    c.execute("SELECT * FROM stuffToPlot WHERE value = 2")
+    print(len(c.fetchall()))
+
+
+
+del_and_update()
+
+# graph_data()
 # create_table()
 # data_entry()
 
